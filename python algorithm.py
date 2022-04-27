@@ -302,19 +302,42 @@
 
 # findIntegerK(5, list)
 
-def sortIndex(k,array):
-    array.sort(reverse=True)
-    proper_index = k-1
-    for i in range(len(array)):
-        if array[i] == 6:
-            return i
+# def sortIndex(k,array):
+#     array.sort(reverse=True)
+#     proper_index = k-1
+#     for i in range(len(array)):
+#         if array[i] == 6:
+#             return i
 
 
 
-# print(sortIndex(3,[5, 7, 4, 6, 9, 8]))
+# # print(sortIndex(3,[5, 7, 4, 6, 9, 8]))
 
-print(sortIndex(4,[5, 7, 4, 6, 9, 8]))
+# print(sortIndex(4,[5, 7, 4, 6, 9, 8]))
 
-[9, 8, 7, 6, 5, 4]
+# [9, 8, 7, 6, 5, 4]
 
         
+def sortIndex2(k,arr):
+   #  print (range(k-1)) 
+    for i in range(k-1):
+        arr.remove(max(arr))
+    return max(arr)
+    
+    
+print(sortIndex2(4,[5, 7, 4, 6, 9, 8]))
+
+def sortIndex3(k, arr):
+    length= len(arr)
+    arr.sort()
+    return arr[length - k]
+ 
+print(sortIndex3(4,[5, 7, 4, 6, 9, 8]))
+
+def sortByMin(k,arr):
+    length=len(arr)
+    arr.sort(reverse=True)
+    return arr[length-k]
+
+
+print(sortByMin(2,[5, 7, 4, 6, 9, 8]))
