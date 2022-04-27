@@ -74,10 +74,10 @@
 
 #!Using List comprehensions
 
-from asyncore import loop
+# from asyncore import loop
 
 
-names=["lauren", "Ally", "Kirstin", "Tina"]
+# names=["lauren", "Ally", "Kirstin", "Tina"]
 
 # # l_names= [name for name in names if name.startswith("l")] 
 
@@ -197,30 +197,124 @@ names=["lauren", "Ally", "Kirstin", "Tina"]
 #second need to get ride of capital letters
 # assign each letter a number value with a for of loop
 
-new = "G o d"
-nope = "G o d"
+# new = "G o d"
+# nope = "d i g"
 
-def anagram(str1, str2):
-    str1 = str1.replace(" ", "").lower()
-    str2 = str2.replace(" ", "").lower()
-    if len(str1) != len(str2):
-        return False
-    count = {}
-    for letter in str1:
-        if letter in count:
-            count[letter] += 1
-        else: 
-            count[letter] = 1
-    for letter in str2:
-        if letter in count:
-            count[letter] -= 1
-        else: count[letter] = 1
-    for k in count:
-        if count[k] != 0: 
-           return False
-    return True
+# def anagram(str1, str2):
+#     str1 = str1.replace(" ", "").lower()
+#     str2 = str2.replace(" ", "").lower()
+#     if len(str1) != len(str2):
+#         return False
+#     count = {}
+#     for letter in str1:
+#         if letter in count:
+#             count[letter] += 1
+#         else: 
+#             count[letter] = 1
+#     for letter in str2:
+#         if letter in count:
+#             count[letter] -= 1
+#         else: count[letter] = 1
+#     for k in count:
+#         if count[k] != 0: 
+#            return False
+#     return True
    
     
-print(anagram(new, nope))
+# print(anagram(new, nope))
 
 # Reference youtube video for refresher
+
+
+#create a staircase 
+
+####
+ ###
+  ##
+   # 
+# new=4g.find()
+
+# # get length of new 
+# # 
+
+# def staircase(n):
+#     for number in n:
+#         return "cool"
+        
+
+    
+
+# print(staircase(new))
+
+# s = 'Python' #initial string
+# reversed=reversed(s) # .join() method merges all of the characters resulting from the reversed iteration into a new string
+# print(reversed)
+
+
+# def pathagon(a,b,c):
+#    if pow(a, 2) + pow(b, 2) == pow(c, 2):
+#       print ("This is true")
+#    else:
+#        print ("this isn not true")
+    
+  
+# (pathagon(2,4,5))
+
+#anagram test 
+
+
+    
+# def functions(string1, string2):
+#    if len(string1) != len(string2):
+#       print ("not an anagram")
+#    # createdList = list(string1)
+#    # createdList2 = list(string2)
+#    createdString = {}
+#    createdString2 = {}
+#    for ch in string1: 
+#       if ch in createdString: 
+#          createdString[ch] += 1
+#       else:
+#          createdString[ch] = 1
+#    for ch in string2: 
+#       if ch in createdString2: 
+#          createdString2[ch] += 1
+#       else:
+#          createdString2[ch] = 1
+#    for key in createdString: 
+#       if key not in createdString2 or createdString2[key] != createdString[key]:
+#          return False
+#    return True
+
+
+   
+# print(functions("garden", "danyer"))
+
+
+# def findIntegerK(k, array):
+#    sort(reverse(array))
+#    print array
+
+
+   
+
+# list=[1,4,5,9]
+
+# findIntegerK(5, list)
+
+def sortIndex(k,array):
+    array.sort(reverse=True)
+    proper_index = k-1
+    for i in range(len(array)):
+        if array[i] == 6:
+            return i
+
+
+
+# print(sortIndex(3,[5, 7, 4, 6, 9, 8]))
+
+print(sortIndex(4,[5, 7, 4, 6, 9, 8]))
+
+[9, 8, 7, 6, 5, 4]
+
+        
