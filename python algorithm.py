@@ -341,3 +341,14 @@ def sortByMin(k,arr):
 
 
 print(sortByMin(2,[5, 7, 4, 6, 9, 8]))
+
+def first_and_last(target,arr):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            start = i
+            while i+1 < len(arr) and arr[i+1] == target:
+                i+=1 
+            return [start, i]
+    return [-1, -1]
+    
+print(first_and_last(5,[1,2,5,5,5,9]))
