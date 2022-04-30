@@ -352,3 +352,18 @@ def first_and_last(target,arr):
     return [-1, -1]
     
 print(first_and_last(5,[1,2,5,5,5,9]))
+
+def test(target,arr):
+    sorted=[]
+    final=[]
+    for i in range(len(arr)):
+        if arr[i] == target:
+            sorted.append(i)
+    maxIndex=max(sorted)
+    minIndex=min(sorted)
+    final.append(minIndex)
+    final.append(maxIndex)
+    
+    return final
+        
+print(test(5,[1,2,5,5,5,9]))
