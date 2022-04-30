@@ -318,52 +318,77 @@
 # [9, 8, 7, 6, 5, 4]
 
         
-def sortIndex2(k,arr):
-   #  print (range(k-1)) 
-    for i in range(k-1):
-        arr.remove(max(arr))
-    return max(arr)
+# def sortIndex2(k,arr):
+#    #  print (range(k-1)) 
+#     for i in range(k-1):
+#         arr.remove(max(arr))
+#     return max(arr)
     
     
-print(sortIndex2(4,[5, 7, 4, 6, 9, 8]))
+# print(sortIndex2(4,[5, 7, 4, 6, 9, 8]))
 
-def sortIndex3(k, arr):
-    length= len(arr)
-    arr.sort()
-    return arr[length - k]
+# def sortIndex3(k, arr):
+#     length= len(arr)
+#     arr.sort()
+#     return arr[length - k]
  
-print(sortIndex3(4,[5, 7, 4, 6, 9, 8]))
+# print(sortIndex3(4,[5, 7, 4, 6, 9, 8]))
 
-def sortByMin(k,arr):
-    length=len(arr)
-    arr.sort(reverse=True)
-    return arr[length-k]
+# def sortByMin(k,arr):
+#     length=len(arr)
+#     arr.sort(reverse=True)
+#     return arr[length-k]
 
 
-print(sortByMin(2,[5, 7, 4, 6, 9, 8]))
+# print(sortByMin(2,[5, 7, 4, 6, 9, 8]))
 
-def first_and_last(target,arr):
-    for i in range(len(arr)):
-        if arr[i] == target:
-            start = i
-            while i+1 < len(arr) and arr[i+1] == target:
-                i+=1 
-            return [start, i]
-    return [-1, -1]
+# def first_and_last(target,arr):
+#     for i in range(len(arr)):
+#         if arr[i] == target:
+#             start = i
+#             while i+1 < len(arr) and arr[i+1] == target:
+#                 i+=1 
+#             return [start, i]
+#     return [-1, -1]
     
-print(first_and_last(5,[1,2,5,5,5,9]))
+# print(first_and_last(5,[1,2,5,5,5,9]))
 
-def test(target,arr):
-    sorted=[]
-    final=[]
-    for i in range(len(arr)):
-        if arr[i] == target:
-            sorted.append(i)
-    maxIndex=max(sorted)
-    minIndex=min(sorted)
-    final.append(minIndex)
-    final.append(maxIndex)
+# def test(target,arr):
+#     sorted=[]
+#     final=[]
+#     for i in range(len(arr)):
+#         if arr[i] == target:
+#             sorted.append(i)
+#     maxIndex=max(sorted)
+#     minIndex=min(sorted)
+#     final.append(minIndex)
+#     final.append(maxIndex)
     
-    return final
+#     return final
         
-print(test(5,[1,2,5,5,5,9]))
+# print(test(5,[1,2,5,5,5,9]))
+
+
+def index_array(target, arr):
+    lower_than_target = []
+    lower_than_target_two = lower_than_target
+    for i in range(len(arr)):
+        if arr[i] <= target:
+            lower_than_target.append(i)
+    for i in range(len(lower_than_target)):
+       for j in range(len(lower_than_target_two)):
+          if lower_than_target[i] + lower_than_target_two[j] == target:
+            return lower_than_target[i], lower_than_target_two[j]
+       
+print(index_array(5,[1,2,3,5,7,9]))
+       
+    
+         
+       
+        
+        
+# print(index_array(5, [1,2,3,4,5,6,8,9]))
+
+
+
+
