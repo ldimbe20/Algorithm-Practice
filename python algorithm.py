@@ -369,20 +369,32 @@
 # print(test(5,[1,2,5,5,5,9]))
 
 
-def index_array(target, arr):
-    lower_than_target = []
-    lower_than_target_two = lower_than_target
-    for i in range(len(arr)):
-        if arr[i] <= target:
-            lower_than_target.append(i)
-    for i in range(len(lower_than_target)):
-       for j in range(len(lower_than_target_two)):
-          if lower_than_target[i] + lower_than_target_two[j] == target:
-            return lower_than_target[i], lower_than_target_two[j]
+# def index_array(target, arr):
+#     lower_than_target = []
+#     lower_than_target_two = lower_than_target
+#     for i in range(len(arr)):
+#         if arr[i] <= target:
+#             lower_than_target.append(i)
+#     for i in range(len(lower_than_target)):
+#        for j in range(len(lower_than_target_two)):
+#           if lower_than_target[i] + lower_than_target_two[j] == target:
+#             return lower_than_target[i], lower_than_target_two[j]
        
-print(index_array(5,[1,2,3,5,7,9]))
+# print(index_array(5,[1,2,3,5,7,9]))
        
-    
+def two_sums(target,arr):
+   values= dict()
+   
+   for i, element in enumerate(arr):
+      comp = target - element
+      
+      if comp in values:
+         return [values[comp], i]
+      values[element] = i
+   return []
+       
+list1=two_sums(8,[1,3,5,6])
+print(list1)
          
        
         
