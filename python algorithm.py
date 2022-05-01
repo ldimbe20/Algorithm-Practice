@@ -382,25 +382,36 @@
        
 # print(index_array(5,[1,2,3,5,7,9]))
        
-def two_sums(target,arr):
-   values= dict()
+# def two_sums(target,arr):
+#    values= dict()
    
-   for i, element in enumerate(arr):
-      comp = target - element
+#    for i, element in enumerate(arr):
+#       comp = target - element
       
-      if comp in values:
-         return [values[comp], i]
-      values[element] = i
-   return []
+#       if comp in values:
+#          # if the comp ake the value that you minus to get target 
+#          #for example if you minus target(8) by 5 the comp would be 3 so you return the comp index and and 5
+#          return [values[comp], i]
+#       #!confused by return
+#       values[element] = i
+#    return []
        
-list1=two_sums(8,[1,3,5,6])
-print(list1)
+# list1=two_sums(8,[1,5,6,3])
+# print(list1)
          
        
         
         
 # print(index_array(5, [1,2,3,4,5,6,8,9]))
 
+def findLargest(string):
+    string.sort()
+    string.reverse()
+    largestNumber=string.pop(0)
+    secondLargest=string.pop(1)
+    return secondLargest + largestNumber
+    
+print(findLargest([1,2,3,4,6]))
 
 
 
